@@ -16,58 +16,51 @@ This project aims to clean and explore crime incident data from a user-input sim
 ## Project Structure
 
     ├── README.md          <- README .
-    ├── query              <- Code of the DB cleaning and exploratory queries.
+    ├── code              <- Code of the DB preprocessing and analysis
     │   │
-    │   └── crime_incident_cleaning_queries.sql    <- Cleaning queries for raw dataset.
-    │   └── crime_analysis_queries.sql             <- Exploratory analysis queries.
+    │   └── telco_churn_analysis.ipynb    <- Preprocessing and analysis for telco dataset
     │
     ├── src            <- Source for this project.
         │
-        ├── crime_incidents_messy.csv     <- Dataset used for this project.
+        ├── telco_churn_data.csv     <- Dataset used for this project.
         
 --------
 
 ## Dataset
-The dataset used in this project contains mock crime reports ranging from 2018-2024. It is meant to simulate a database of user-input instances containing data such as suspect information, victim information, officer information, crime type, weapon used, case status, resolution, etc. 
-
-<img width="1067" height="493" alt="crime_incident_dirty" src="https://github.com/user-attachments/assets/89629d38-f617-47c4-ae2c-4f191fa8b7ea" />
-
+The dataset used in this project contains sample churn data from a telecommunication company. Values include contract type, contract add-ons, monthly charge, total charges, contract status, churn rating, tenure in months, and churn reason.
 
 ## Database
-To facilitate data management and analysis, a SQL database has been created to store the dataset. SQL provides a robust and efficient way to query and manipulate the data. The database schema has been designed to ensure proper organization and ease of use. The structure of the database enables seamless integration with various data visualization tools.
+To facilitate data management and analysis, the dataset was read into a python jupyter notebook. Python provides access to dynamic analytic libraries such as numpy, pandas, matplotlib, and seaborn enabling churn analysis, correlation analysis, and customer segmentation. 
 
 ## Data Processing
-The data contained in this Kaggle dataset requires some preprocessing to clean and transform it into a suitable format for analysis. The raw data has inconsistent formatting, typos, and missing data. SQL queries were utilized to clean, filter, and transform the data as necessary. This ensures that the data used for analysis is accurate and reliable.
-
-<img width="1088" height="492" alt="crime_incident_clean" src="https://github.com/user-attachments/assets/f40d9350-570b-4298-95b8-2650d6765a95" />
-
+The data contained in this Kaggle dataset was relatively clean for this application. Python was used to explore the dataset's shape, schema, and datatypes. It was then used to rule out duplicate rows and missing data and ensure consistent formatting.
 
 ## Analysis includes:
 
-**Most Common Crime Type:** Totals of the most frequently reported crime types.
+**Customer Churn Count and Rate:** How many customers churned, joined, and stayed during the reporting period. Represented as raw customer count, gross customer churn rate, and net customer churn rate.
 
-**Crime Trends Over Time:** Representation of how crime volume has fluctuated over the years, by crime type.
+**Revenue Churn Rate:** What percent of revenue churned, stayed, and joined?
 
-**Arrest Rate By Crime Type:** Likelihood of an arrest by crime type.
+**Churn by Contract Type:** What contract types churned the most?
 
-**District and City Hotspot Ranking:** Representations of crime volume by city and district.
+**Contract Type by Offer:** Does the signing offer affect contract type?
 
-**Time of Day Incident Analysis:** Exploration of when incidents may be most likely to occur.
+**Churn Rate by Contract Add-On:** Which contracts have higher/lower correlation to customer churn?
 
-**Rolling Crime Trends:** Visualization of 7-day and 30-day rolling crime totals and averages.
+**Correlation with Churn:** Which numerical variables have most significant correlation to customer churn?
+
+**Customer Segmentation:** Analyze churn by customer segments. Segments include tenure group, spending tier, and value segments.
 
 ## Technologies Used
-**SQL:** For data extraction, transformation, and loading into the database.
+**Python:** For data extraction, transformation, and loading into the database.
 
-**Database Management System:** PostgreSQL to host and manage the dataset.
-
-
-**Programming Languages:**  SQL for data processing and scripting.
+**Database Management System:** Jupyter Notebook to host and manage the dataset.
 
 
+**Programming Languages:**  Python for data processing and analysis.
 
 **Conclusion**
-The crime incidents project aims to leverage SQL to clean and standardize a messy user-input dataset and provide general insights on crime volume and reveal potential crime trends. This project is valuable for policymakers, residents, and law enforcement interested in crime data of the relevant cities/disticts.
+The telco churn project aims to leverage python to clean and analyze sample customer churn data to provide valuable churn insights and an actionable retention strategy for company stakeholders.
 
 ## Author
 - <ins><b>©2023 Ryker Boeh. All rights reserved</b></ins>
