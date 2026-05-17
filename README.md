@@ -11,7 +11,7 @@
 
 
 ## Overview
-This project aims to clean and explore crime incident data from a user-input simulated dataset sourced from Kaggle. The dataset required extensive cleaning and standardization to handle typos, inconsistent inputs, and missing data. The messy data was processed in SQL and explored to uncover big picture crime metrics and potential trends.
+This project aims to explore and analyze a telcom customer churn dataset to identify major drivers of customer churn and recommend retention strategies.
 
 ## Project Structure
 
